@@ -1,0 +1,253 @@
+{
+  "schema_version": "1.0.0",
+  "manifest_version": "1.0.0",
+  "source": {
+    "repository_url": "https://github.com/claudiogrimo/turbo-crowd-litellm-skills",
+    "kind": "git-subdir",
+    "ref": "main",
+    "commit": {
+      "sha": "5619e781163d7dd9ca69df5a342af2cfd44f42f1",
+      "role": "provenance-only",
+      "note": "The LiteLLM gateway has no immutable source-ref field."
+    }
+  },
+  "publication_policy": {
+    "action_sequence": "register_then_readback_then_enable_then_readback",
+    "automatic_retry": false,
+    "automatic_rollback": false,
+    "require_fresh_collision_read_before_each_write": true
+  },
+  "skills": [
+    {
+      "order": 1,
+      "name": "add-agent",
+      "path": "add-agent",
+      "version": "1.0.0",
+      "description": "Create an AI agent with model and optional MCP access.",
+      "domain": "agent-lifecycle",
+      "namespace": "litellm-admin",
+      "keywords": ["agent", "create", "model", "mcp"],
+      "sensitivity_class": "operator-governed"
+    },
+    {
+      "order": 2,
+      "name": "update-agent",
+      "path": "update-agent",
+      "version": "1.0.0",
+      "description": "Update an AI agent model, description, or MCP servers.",
+      "domain": "agent-lifecycle",
+      "namespace": "litellm-admin",
+      "keywords": ["agent", "update", "model", "mcp"],
+      "sensitivity_class": "operator-governed"
+    },
+    {
+      "order": 3,
+      "name": "delete-agent",
+      "path": "delete-agent",
+      "version": "1.0.0",
+      "description": "Delete an AI agent by ID.",
+      "domain": "agent-lifecycle",
+      "namespace": "litellm-admin",
+      "keywords": ["agent", "delete", "lifecycle"],
+      "sensitivity_class": "operator-governed"
+    },
+    {
+      "order": 4,
+      "name": "add-org",
+      "path": "add-org",
+      "version": "1.0.0",
+      "description": "Create an organization with budget and model access.",
+      "domain": "organization-lifecycle",
+      "namespace": "litellm-admin",
+      "keywords": ["organization", "create", "budget", "models"],
+      "sensitivity_class": "operator-governed"
+    },
+    {
+      "order": 5,
+      "name": "delete-org",
+      "path": "delete-org",
+      "version": "1.0.0",
+      "description": "Delete organizations by ID.",
+      "domain": "organization-lifecycle",
+      "namespace": "litellm-admin",
+      "keywords": ["organization", "delete", "lifecycle"],
+      "sensitivity_class": "operator-governed"
+    },
+    {
+      "order": 6,
+      "name": "add-team",
+      "path": "add-team",
+      "version": "1.0.0",
+      "description": "Create a team with budget and allowed models.",
+      "domain": "team-lifecycle",
+      "namespace": "litellm-admin",
+      "keywords": ["team", "create", "budget", "models"],
+      "sensitivity_class": "operator-governed"
+    },
+    {
+      "order": 7,
+      "name": "update-team",
+      "path": "update-team",
+      "version": "1.0.0",
+      "description": "Update a team's budget, models, or limits.",
+      "domain": "team-lifecycle",
+      "namespace": "litellm-admin",
+      "keywords": ["team", "update", "budget", "limits"],
+      "sensitivity_class": "operator-governed"
+    },
+    {
+      "order": 8,
+      "name": "delete-team",
+      "path": "delete-team",
+      "version": "1.0.0",
+      "description": "Delete teams by ID.",
+      "domain": "team-lifecycle",
+      "namespace": "litellm-admin",
+      "keywords": ["team", "delete", "lifecycle"],
+      "sensitivity_class": "operator-governed"
+    },
+    {
+      "order": 9,
+      "name": "add-user",
+      "path": "add-user",
+      "version": "1.0.0",
+      "description": "Create a user with role and optional limits.",
+      "domain": "user-lifecycle",
+      "namespace": "litellm-admin",
+      "keywords": ["user", "create", "role", "limits"],
+      "sensitivity_class": "operator-governed"
+    },
+    {
+      "order": 10,
+      "name": "update-user",
+      "path": "update-user",
+      "version": "1.0.0",
+      "description": "Update a user's budget, role, or models.",
+      "domain": "user-lifecycle",
+      "namespace": "litellm-admin",
+      "keywords": ["user", "update", "budget", "role"],
+      "sensitivity_class": "operator-governed"
+    },
+    {
+      "order": 11,
+      "name": "delete-user",
+      "path": "delete-user",
+      "version": "1.0.0",
+      "description": "Delete users by ID.",
+      "domain": "user-lifecycle",
+      "namespace": "litellm-admin",
+      "keywords": ["user", "delete", "lifecycle"],
+      "sensitivity_class": "operator-governed"
+    },
+    {
+      "order": 12,
+      "name": "view-usage",
+      "path": "view-usage",
+      "version": "1.0.0",
+      "description": "Query usage, spend, tokens, and attribution.",
+      "domain": "observability",
+      "namespace": "litellm-admin",
+      "keywords": ["usage", "spend", "tokens", "attribution"],
+      "sensitivity_class": "operator-governed"
+    },
+    {
+      "order": 13,
+      "name": "delete-key",
+      "path": "delete-key",
+      "version": "1.0.0",
+      "description": "Delete one or more API keys.",
+      "domain": "api-key-lifecycle",
+      "namespace": "litellm-admin",
+      "keywords": ["api-key", "delete", "lifecycle"],
+      "sensitivity_class": "operator-governed"
+    },
+    {
+      "order": 14,
+      "name": "delete-mcp",
+      "path": "delete-mcp",
+      "version": "1.0.0",
+      "description": "Delete an MCP server by ID.",
+      "domain": "mcp-lifecycle",
+      "namespace": "litellm-admin",
+      "keywords": ["mcp", "delete", "server"],
+      "sensitivity_class": "operator-governed"
+    },
+    {
+      "order": 15,
+      "name": "delete-model",
+      "path": "delete-model",
+      "version": "1.0.0",
+      "description": "Delete a model by name or ID.",
+      "domain": "model-lifecycle",
+      "namespace": "litellm-admin",
+      "keywords": ["model", "delete", "routing"],
+      "sensitivity_class": "operator-governed"
+    },
+    {
+      "order": 16,
+      "name": "add-key",
+      "path": "add-key",
+      "version": "1.0.0",
+      "description": "Generate a proxy API key with scoped limits.",
+      "domain": "api-key-lifecycle",
+      "namespace": "litellm-admin",
+      "keywords": ["api-key", "create", "scope", "limits"],
+      "sensitivity_class": "human-confirmed-only"
+    },
+    {
+      "order": 17,
+      "name": "update-key",
+      "path": "update-key",
+      "version": "1.0.0",
+      "description": "Update API-key budget, models, or expiry.",
+      "domain": "api-key-lifecycle",
+      "namespace": "litellm-admin",
+      "keywords": ["api-key", "update", "budget", "expiry"],
+      "sensitivity_class": "human-confirmed-only"
+    },
+    {
+      "order": 18,
+      "name": "add-mcp",
+      "path": "add-mcp",
+      "version": "1.0.0",
+      "description": "Register an MCP server with transport, URL, optional auth.",
+      "domain": "mcp-lifecycle",
+      "namespace": "litellm-admin",
+      "keywords": ["mcp", "create", "server", "transport"],
+      "sensitivity_class": "human-confirmed-only"
+    },
+    {
+      "order": 19,
+      "name": "update-mcp",
+      "path": "update-mcp",
+      "version": "1.0.0",
+      "description": "Update an MCP server URL, auth, or description.",
+      "domain": "mcp-lifecycle",
+      "namespace": "litellm-admin",
+      "keywords": ["mcp", "update", "server", "authentication"],
+      "sensitivity_class": "human-confirmed-only"
+    },
+    {
+      "order": 20,
+      "name": "add-model",
+      "path": "add-model",
+      "version": "1.0.0",
+      "description": "Add a provider model and test its routing.",
+      "domain": "model-lifecycle",
+      "namespace": "litellm-admin",
+      "keywords": ["model", "create", "provider", "routing"],
+      "sensitivity_class": "human-confirmed-only"
+    },
+    {
+      "order": 21,
+      "name": "update-model",
+      "path": "update-model",
+      "version": "1.0.0",
+      "description": "Update model configuration including API key/base URL.",
+      "domain": "model-lifecycle",
+      "namespace": "litellm-admin",
+      "keywords": ["model", "update", "provider", "configuration"],
+      "sensitivity_class": "human-confirmed-only"
+    }
+  ]
+}
