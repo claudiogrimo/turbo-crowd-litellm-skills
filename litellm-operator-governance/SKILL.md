@@ -5,7 +5,7 @@ license: MIT
 compatibility: Requires access to the applicable first-party LiteLLM skills and official documentation.
 metadata:
   author: Turbo Crowd
-  version: "1.0"
+  version: "1.0.0"
 ---
 
 # LiteLLM Operator Governance

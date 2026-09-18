@@ -12,7 +12,9 @@ First-party LiteLLM skills are copied and pinned from upstream. They are not loc
 
 ## Agent Push Consent
 
-`main` is the published channel read by LiteLLM Skills Gateway.
+`main` is the published channel read by LiteLLM Skills Gateway. The currently registered plugin is `litellm-operator-governance` version `1.0.0`.
+
+The gateway records source from published `main`; it has no Git-ref pin field. Immutable source commits remain provenance and audit evidence, not live gateway pins.
 
 Agents may prepare changes and report the proposed diff. An agent may push only after explicit human consent in the active conversation for that proposed change. Silence, a previous general authorization, or an inferred preference is not consent for a future push.
 
