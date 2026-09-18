@@ -1,0 +1,7 @@
+# Keep local environment files and generated diagnostics out of this public repository.
+.env
+.env.*
+!.env.example
+*.log
+*.trace
+*.dump
